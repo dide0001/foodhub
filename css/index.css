@@ -12,15 +12,15 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    min-height: 60vh;            /* gives the hero a consistent height on wide screens */
-    aspect-ratio: 16 / 9;        /* keeps image nicely proportioned on desktop */
-    background-color: #fff8f0;   /* fallback color while image loads */
+    min-height: 60vh;            
+    aspect-ratio: 16 / 9;       
+    background-color: #fff8f0;   
 }
 
 .hero img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   /* fill hero area without distortion */
+    object-fit: cover;   
     display: block;
 }
 

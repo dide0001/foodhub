@@ -95,7 +95,7 @@
   }
 
   .nav {
-    display: none; /* hidden by default */
+    display: none; 
     flex-direction: column;
     gap: 1.5rem;
     background: rgba(255,255,255,0.9);
@@ -108,7 +108,7 @@
   }
 
   .nav.active {
-    display: flex; /* show menu when toggled */
+    display: flex; 
   }
 
   .nav a {
@@ -117,7 +117,7 @@
   }
 
   .search {
-    display: none; /* hide search bar on mobile to save space */
+    display: none; 
   }
 
   .burger {
