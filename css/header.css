@@ -80,3 +80,73 @@
 .search button:hover {
   background: #ffb26b;
 }
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    
+    position: fixed;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .nav {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    text-align: center;
+  }
+
+  .nav.active {
+    display: flex; /* show menu when toggled */
+  }
+
+  .nav a {
+    color: #333;
+    font-size: 1.2rem;
+  }
+
+  .search {
+    display: none; /* hide search bar on mobile to save space */
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger div {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav a {
+    font-size: 1.1rem;
+  }
+}

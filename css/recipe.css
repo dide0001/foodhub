@@ -9,7 +9,7 @@ body {
 
 /* Header Image */
 .header-image {
-  width: 100vw;       
+  width: 100%;       
   margin: 0;           
   padding: 0;         
   overflow: hidden;   
@@ -17,7 +17,7 @@ body {
 
 .header-image img {
   width: 100%;         
-  height: auto;       
+  height: 150px;       
   display: block;      
 }
 
@@ -26,7 +26,7 @@ body {
   max-width: 900px;
   margin: 2rem auto;
   background-color: #fff;
-  padding: 5rem;
+  padding: clamp(1.25rem, 3.5vw, 3rem);
   border-radius: 15px;
   box-shadow: 0 0 12px lightgrey;
   text-align: left;
@@ -38,15 +38,17 @@ body {
 #recipeTop {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 2rem;
 }
 
 #recipeTop img {
   width: 100%;
-  max-width: 350px;
+  max-width: 420px;
   height: auto;
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 15px;
+  justify-self: center;
 }
 
 .ingredients h2 {
@@ -108,4 +110,37 @@ body {
   color: #888;
   font-size: 0.9rem;
   border-top: 1px solid #eee;
+}
+
+/* --- Responsivt --- */
+@media (max-width: 900px) {
+  #recipeDetail { max-width: 95%; }
+}
+
+@media (max-width: 768px) {
+ 
+
+  #recipeDetail {
+    margin: 1rem auto;
+  }
+
+  #recipeTop {
+    grid-template-columns: 1fr; /* stack image above text */
+    gap: 1.2rem;
+  }
+
+  .ingredients ul { columns: 1; gap: 1rem; }
+
+  .instructions ol { padding-left: 1rem; }
+}
+
+@media (max-width: 480px) {
+
+
+  #recipeDetail { padding: 1rem; }
+
+  .ingredients h2,
+  .instructions h2 { font-size: 1.25rem; }
+
+  .instructions ol { line-height: 1.6rem; }
 }

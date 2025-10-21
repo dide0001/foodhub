@@ -12,12 +12,15 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    min-height: 60vh;            /* gives the hero a consistent height on wide screens */
+    aspect-ratio: 16 / 9;        /* keeps image nicely proportioned on desktop */
+    background-color: #fff8f0;   /* fallback color while image loads */
 }
 
 .hero img {
-    width: 100%;          
-    height: 100%;         
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fill hero area without distortion */
     display: block;
 }
 
@@ -124,3 +127,96 @@ html, body {
 }
 
 /* --- Responsivt --- */
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 16px; 
+  }
+
+  .filters-section,
+  .recipe-grid,
+  .site-footer {
+    padding: 0 16px; 
+  }
+
+  .hero {
+    min-height: 50vh;     
+    aspect-ratio: 4 / 3; 
+
+  .hero h2 {
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84%;
+    font-size: 2.2rem;    
+    line-height: 1.1;
+  }
+
+  .hero .btn-explore {
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+
+  .filters-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .recipe-card img {
+    height: 160px;
+  }
+
+  .recipe-info {
+    padding: 14px;
+  }
+
+  .recipe-info h4 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .recipe-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 44vh;   
+    aspect-ratio: 3 / 4; 
+  }
+
+  .hero h2 {
+    top: 58%;
+    width: 90%;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero .btn-explore {
+    top: 78%;
+    width: auto;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+
+  .recipe-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .recipe-card img {
+    height: 150px;
+  }
+}
+}
