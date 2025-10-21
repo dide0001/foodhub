@@ -128,6 +128,8 @@
 }
 
 
+
+
 .site-footer {
     text-align: center;
     padding: 25px 20px;
@@ -138,5 +140,8 @@
 @media (max-width: 768px) {
   .story-content {
     grid-template-columns: 1fr;
+  }
+  .header-image{
+    opacity: 0;
   }
 }

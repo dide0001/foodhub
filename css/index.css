@@ -26,7 +26,7 @@ html, body {
 
 .hero h2 {
     position: absolute;
-    top: 75%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3.5rem;
@@ -142,7 +142,7 @@ html, body {
   .hero {
     min-height: 50vh;     
     aspect-ratio: 4 / 3; 
-
+  }
   .hero h2 {
     top: 62%;
     left: 50%;
@@ -199,7 +199,7 @@ html, body {
   .hero h2 {
     top: 58%;
     width: 90%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5px;
   }
 
@@ -218,5 +218,4 @@ html, body {
   .recipe-card img {
     height: 150px;
   }
-}
 }
